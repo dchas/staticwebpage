@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: staticweb
-        image: 643573609382.dkr.ecr.us-east-2.amazonaws.com/staticweb
+        image: 643573609382.dkr.ecr.us-east-2.amazonaws.com/staticweb:4
         ports:
         - containerPort: 80
