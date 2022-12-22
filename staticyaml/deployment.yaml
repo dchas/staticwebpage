@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: staticweb-deployment
+  labels:
+    app: staticweb
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: staticweb
+  template:
+    metadata:
+      labels:
+        app: staticweb
+    spec:
+      containers:
+      - name: staticweb
+        image: 643573609382.dkr.ecr.us-east-2.amazonaws.com/staticweb
+        ports:
+        - containerPort: 80
